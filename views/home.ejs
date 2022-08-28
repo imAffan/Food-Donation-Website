@@ -1,0 +1,92 @@
+<% layout('layouts/boilerplate')%>
+ 
+
+  
+
+
+ 
+
+
+
+
+
+ 
+<h1>FoodItems</h1>
+ 
+ 
+ 
+
+ 
+ 
+<div class="row">
+
+    <% for (let campground of items){%>
+      <% var p= campground.price%>
+      <% console.log(p) %>
+    <div class="col">
+        <div class="card" style="width: 18rem; margin-bottom: 20px;">
+            <img src="<%=campground.image%>" class="card-img-top" alt="Fissure in Sandstone"/>
+            <div class="card-body">
+              <h5 class="card-title" style="float: left;"><%= campground.title %> </h5>
+              <p class="card-text"   style="margin-left: 70%;"   > Rs <%= campground.price %>/kg</p>
+            <!-- <a href="#!" class="btn btn-primary">Add</a>--> 
+           
+               <form action="">
+                
+               
+
+                <input  style="width: 30% ; float: left;" value="0"  type="number" id="typeNumber" min="0"   class="form-control" />
+              
+                <div class="mb-3">
+                  <p   style="float:left; margin-left: 5%;font-size: larger; " > KG</p>
+                  <button  style="margin-left: 30%;"  class="btn btn-info">Add</button>
+              </div>
+           
+               
+            </form>
+          
+
+
+           
+            </div>
+          </div>
+</div>
+<% }%>
+ 
+ 
+ <script>
+  function fun(p) { 
+    
+     const x=document.getElementById("xyz")
+     
+    
+     
+     console.log("****")
+    
+    // var amount += Number(p);
+
+     var s =  Number(p); 
+    x.value = Number(x.value) + s ;
+           
+   
+    }   
+    
+       function fun2()
+       {
+        const x=document.getElementById("xyz");
+
+
+       }
+       
+ </script>
+
+
+ 
+ 
+
+ 
+
+
+ 
+
+

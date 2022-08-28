@@ -1,0 +1,40 @@
+<% layout('layouts/aboilerplate')%>
+<div class="row">
+    <h1 class="text-center">Edit food Item</h1>
+    <div class="col-6 offset-3">
+        <form action="/crud/<%=food._id%>?_method=PUT " method="POST" novalidate class="validated-form">
+            <div class="mb-3">
+                <label class="form-label" for="title">Title</label>
+                <input class="form-control" type="text" id="title" name="food[title]"
+                    value="<%=food.title %>" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="location">Price</label>
+                <input class="form-control" type="text" id="price" name="food[price]"
+                    value="<%=food.price %>" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="image">Image Url</label>
+                <input class="form-control" type="text" id="image" name="food[image]"
+                    value="<%=food.image %>" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+         
+          
+            <div class="mb-3">
+                <button class="btn btn-info">Update food</button>
+            </div>
+        </form>
+         <a class="card-link btn btn-info" href="/adminhome">Back To Foods</a>
+
+
+    </div>
+</div>

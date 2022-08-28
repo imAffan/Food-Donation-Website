@@ -1,0 +1,25 @@
+<% layout('layouts/aboilerplate')%>
+
+<div class="row">
+    <div class="col-6 offset-3">
+        <div class="card mb-3">
+            <img src="<%= food.image%>" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"><%= food.title%></h5>
+                
+            </div>
+            <ul class="list-group list-group-flush">
+                
+                <li class="list-group-item">$<%= food.price%>/kg</li>
+            </ul>
+            <div class="card-body">
+                <a class="card-link btn btn-info" href="/crud/<%=food._id%>/edit">Edit</a>
+
+                <a class="card-link btn btn-info" href="/adminhome">Back</a>
+            </div>
+            <div class="card-footer text-muted">
+                 
+            </div>
+        </div>
+    </div>
+</div>
