@@ -22,7 +22,7 @@
 
     <% for (let campground of items){%>
       <% var p= campground.price%>
-      <% console.log(p) %>
+      
     <div class="col">
         <div class="card" style="width: 18rem; margin-bottom: 20px;">
             <img src="<%=campground.image%>" class="card-img-top" alt="Fissure in Sandstone"/>
@@ -31,15 +31,15 @@
               <p class="card-text"   style="margin-left: 70%;"   > Rs <%= campground.price %>/kg</p>
             <!-- <a href="#!" class="btn btn-primary">Add</a>--> 
            
-               <form action="">
+               <form action="/Addtocart">
                 
                
 
-                <input  style="width: 30% ; float: left;" value="0"  type="number" id="typeNumber" min="0"   class="form-control" />
+                <input  name="qty" style="width: 30% ; float: left;" value="0"  type="number" id="typeNumber" min="0"   class="form-control" />
               
                 <div class="mb-3">
                   <p   style="float:left; margin-left: 5%;font-size: larger; " > KG</p>
-                  <button  style="margin-left: 30%;"  class="btn btn-info">Add</button>
+                  <button  style="margin-left: 30%;" type="submit"  class="btn btn-info">Add</button>
               </div>
            
                

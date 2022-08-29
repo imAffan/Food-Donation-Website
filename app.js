@@ -64,17 +64,15 @@ app.get('/', async (req, res) => {
  
 })
 
-app.get('/hey', async (req, res) => {
+app.get('/Addtocart', async (req, res) => {
      
-    res.send(`Amount ${req.body}`);
+    res.send(`Qty:${req.body.qty}`);
+    console.log(req.body)
     
 })
 
-app.get('/add/cart', async (req, res) => {
-     
-    res.render(' add/cart');
-})
-
+ 
+ 
 ////////////////////////////////////
 
 
@@ -103,10 +101,11 @@ app.get('/stock', async (req, res) => {
 
 
 
-app.post('/adminhome',  async (req, res, ) => {
+app.post('/adminhome',  async (req, res ) => {
     // if (!req.body.campground) throw new ExpressError('Invalid Campground Data', 400);
     const food = new item(req.body.food);
     await food.save();
+    console.log(req.body.food)
     res.redirect(`/crud/${food._id}`)
 })
 
@@ -133,6 +132,7 @@ app.get('/home/login', async (req, res) => {
 
     const items = await item.find({})
     res.render('adminhome', { items });
+    console.log(req.body.admin)
     
 })
 
