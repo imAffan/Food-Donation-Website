@@ -64,9 +64,13 @@ app.get('/', async (req, res) => {
  
 })
 
-app.get('/Addtocart', async (req, res) => {
+ app.post('/Addtocart', async (req, res) => {
      
-    res.send(`Qty:${req.body.qty}`);
+    const qty=req.body.qty;
+    req.session.qty=qty;
+    res.send("hi")
+     
+
     console.log(req.body)
     
 })
